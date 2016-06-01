@@ -30,10 +30,10 @@ if (isset($_REQUEST['email']) && $_REQUEST['email']) {
         // }
 
         $var['name'] = strtoupper(remove_accents($var['name']));
-        $var['bg_file'] = 'img/bg-' . $var['type'] . '.png';
-        $images[] = generate_image($info);
+        $var['bg_file'] = 'img/bg-' . $var['type'] . '.jpg';
+        $images[] = generate_image($var);
 
-    //}
+   // }
 }
 
 }

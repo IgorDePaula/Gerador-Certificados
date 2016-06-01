@@ -14,9 +14,9 @@ define('TOP_LOGO', 'img/logo.png');
 /* Database connection credentials.
  * See the dbschema.sql file for the required structure. */
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'teste');
-define('DB_USER', 'root');
-define('DB_PASS', 'root');
+define('DB_NAME', 'gerador');
+define('DB_USER', 'gerador');
+define('DB_PASS', 'gerador');
 
 /* Don't touch this unless you know what you're doing. */
 define('BASE_PATH', dirname(__FILE__));

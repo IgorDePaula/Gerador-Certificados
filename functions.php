@@ -72,12 +72,12 @@ function generate_image($args = false) {
 
     global $db;
 
-    $img_file = sha1($args['name'] . $args['bg_file']) . '.png';
+    $img_file = sha1($args['name'] . $args['bg_file']) . '.jpg';
     $img_path = CACHE_PATH . '/' . $img_file;
 
     $angle = 0;
 
-    $img = imagecreatefrompng($args['bg_file']);
+    $img = imagecreatefromjpeg($args['bg_file']);
     $white = imagecolorallocate($img, 255, 255, 255);
 
     $image_width = imagesx($img);
@@ -120,7 +120,7 @@ function generate_image($args = false) {
 
     }
 
-    imagepng($img, $img_path);
+    imagejpeg($img, $img_path);
 
     $sql = connect();
     $query = $sql->prepare("UPDATE attendee SET file = ? WHERE id = ?");
